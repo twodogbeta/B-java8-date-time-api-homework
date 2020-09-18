@@ -10,7 +10,14 @@ import java.time.LocalDate;
  */
 public class Practice2 {
 
-  public static LocalDate getNextWorkDate(LocalDate date) {
-    return null;
-  }
+    public static LocalDate getNextWorkDate(LocalDate date) {
+        LocalDate nextWorkDay;
+        if (date.getDayOfWeek().getValue() == 5)
+             nextWorkDay = date.plusDays(3);
+        else if (date.getDayOfWeek().getValue() == 6)
+            nextWorkDay = date.plusDays(2);
+        else nextWorkDay = date.plusDays(1);
+
+            return nextWorkDay;
+    }
 }

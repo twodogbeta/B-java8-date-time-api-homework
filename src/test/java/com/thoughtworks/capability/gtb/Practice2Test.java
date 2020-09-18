@@ -17,5 +17,12 @@ public class Practice2Test {
 
     LocalDate workDate2 = Practice2.getNextWorkDate(LocalDate.of(2020, 5, 15));
     Assert.assertEquals("2020-05-18", workDate2.toString());
+
+
+    LocalDate workDate3 = Practice2.getNextWorkDate(LocalDate.of(2020, 9, 19));
+    Assert.assertEquals("2020-09-21", workDate3.toString());
+
+    LocalDate workDate4 = Practice2.getNextWorkDate(LocalDate.of(2020, 9, 18));
+    Assert.assertEquals("2020-09-21", workDate4.toString());
   }
 }
